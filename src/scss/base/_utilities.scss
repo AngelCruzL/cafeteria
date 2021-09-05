@@ -1,0 +1,15 @@
+@use '../abstracts/variables' as var;
+
+.u-container {
+  inline-size: 95%;
+  max-inline-size: 120rem;
+  margin-inline: auto;
+}
+
+.u-center-text {
+  text-align: center !important;
+}
+
+.u-bg-primary {
+  background: var.$color-primary;
+}

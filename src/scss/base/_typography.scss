@@ -1,0 +1,32 @@
+@use '../abstracts/variables' as var;
+
+body {
+  font-family: var.$font-primary;
+  font-size: 1.6rem;
+}
+
+p {
+  color: var.$color-black;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3 {
+  margin-block-end: var.$gap;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3.6rem;
+}
+
+h3 {
+  font-size: 3.2rem;
+}
