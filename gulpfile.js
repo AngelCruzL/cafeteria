@@ -5,6 +5,7 @@ const autoprefixer = require('autoprefixer');
 
 const imagemin = require('gulp-imagemin');
 const webp = require('gulp-webp');
+const avif = require('gulp-avif');
 
 function compileCSS(done) {
   src('./src/scss/main.scss')
@@ -22,7 +23,15 @@ function images() {
 }
 
 function webpImages() {
-  return src('./src/img/**/*.{jpg,png}').pipe(webp()).pipe(dest('dist/img'));
+  return src('./src/img/**/*.{jpg,png}')
+    .pipe(webp({ quality: 50 }))
+    .pipe(dest('dist/img'));
+}
+
+function avifImages() {
+  return src('./src/img/**/*.{jpg,png}')
+    .pipe(avif({ quality: 50 }))
+    .pipe(dest('dist/img'));
 }
 
 function dev() {
@@ -33,5 +42,6 @@ function dev() {
 exports.compileCSS = compileCSS;
 exports.images = images;
 exports.webpImages = webpImages;
+exports.avifImages = avifImages;
 exports.dev = dev;
-exports.default = series(images, webpImages, compileCSS, dev);
+exports.default = series(images, webpImages, avifImages, compileCSS, dev);
