@@ -1,0 +1,66 @@
+@use 'abstracts/variables' as var;
+@use 'abstracts/mixins' as mixin;
+
+.menu {
+  padding-block: 15rem 20rem;
+  padding-inline: 5rem;
+  background-image: url(../img/menu_arriba.svg), url(../img/menu_abajo.svg),
+    linear-gradient(to top, var.$color-primary, var.$color-primary);
+  background-repeat: no-repeat;
+  background-size: 200%;
+  background-position: center 5rem, center 92%, 100%;
+
+  @include mixin.respond(tablet) {
+    padding-inline: 0;
+    background-size: 100%;
+  }
+
+  @include mixin.respond(desktop) {
+    background-size: 50%, 50%, 100%;
+  }
+
+  &__grid {
+    @include mixin.respond(tablet) {
+      @include mixin.grid(2, 2rem);
+    }
+  }
+
+  [class$='__menu'] {
+    h3 {
+      color: var.$color-white;
+    }
+
+    &:nth-child(2) {
+      margin-block-start: 7rem;
+
+      @include mixin.respond(tablet) {
+        margin-block-start: 0;
+      }
+    }
+
+    li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-inline: 1rem;
+
+      p {
+        margin-block-end: 3rem;
+        font-size: 2.2rem;
+        line-height: 1.5;
+        color: var.$color-white;
+
+        span {
+          display: block;
+          color: var.$color-secondary;
+        }
+      }
+
+      .price {
+        margin-inline-start: 1.6rem;
+        font-size: 4rem;
+        font-weight: 700;
+      }
+    }
+  }
+}

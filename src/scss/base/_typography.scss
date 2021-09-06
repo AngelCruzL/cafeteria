@@ -28,6 +28,15 @@ h2 {
   }
 }
 
+.white-heading {
+  @extend h2;
+  color: var.$color-white;
+
+  span {
+    color: var.$color-white;
+  }
+}
+
 h3 {
   font-size: 3.2rem;
 }
