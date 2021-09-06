@@ -5,6 +5,10 @@
   margin-block-start: var.$gap;
 
   .list-icons {
+    @include mixin.respond(tablet) {
+      @include mixin.grid(3, 2rem);
+    }
+
     li {
       img {
         margin-inline: auto;
