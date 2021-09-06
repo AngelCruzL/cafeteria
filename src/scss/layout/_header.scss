@@ -1,0 +1,35 @@
+@use 'abstracts/variables' as var;
+@use 'abstracts/mixins' as mixin;
+
+.header {
+  position: relative;
+  padding-block: var.$gap;
+
+  @include mixin.respond(tablet) {
+    min-block-size: 70rem;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset-block: 0;
+    inset-inline: 0;
+    background: var.$color-black;
+    opacity: 0.6;
+  }
+
+  &__content {
+    position: relative;
+
+    h1 {
+      margin-block-start: var.$gap;
+      color: var.$color-white;
+      text-align: center;
+      text-transform: uppercase;
+
+      @include mixin.respond(tablet) {
+        margin-block-start: 10rem;
+      }
+    }
+  }
+}
