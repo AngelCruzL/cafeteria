@@ -1,0 +1,39 @@
+@use 'abstracts/variables' as var;
+@use 'abstracts/mixins' as mixin;
+
+.navbar {
+  ul {
+    display: flex;
+    flex-direction: column;
+    margin-block-start: 5rem;
+    list-style: none;
+    text-align: center;
+
+    @include mixin.respond(tablet) {
+      flex-direction: row;
+      gap: 1rem;
+      margin-block-start: 0;
+    }
+
+    a {
+      display: inline-block;
+      margin-block-end: 1rem;
+      color: var.$color-white;
+      font-size: 2rem;
+      font-weight: 700;
+      text-transform: uppercase;
+
+      @include mixin.respond(tablet) {
+        margin-block-end: 1rem;
+      }
+
+      &:hover {
+        color: var.$color-secondary;
+      }
+
+      &.active {
+        color: var.$color-secondary;
+      }
+    }
+  }
+}
