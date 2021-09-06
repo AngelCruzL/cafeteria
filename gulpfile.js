@@ -1,7 +1,8 @@
-const autoprefixer = require('autoprefixer');
 const { src, dest, watch, series } = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
 const postcss = require('gulp-postcss');
+const autoprefixer = require('autoprefixer');
+const imagemin = require('gulp-imagemin');
 
 function compileCSS(done) {
   src('./src/scss/main.scss')
@@ -12,9 +13,18 @@ function compileCSS(done) {
   done();
 }
 
-function dev() {
-  watch('./src/scss/**/*.scss', compileCSS);
+function images() {
+  return src('./src/img/**/*')
+    .pipe(imagemin({ optimizationLevel: 3 }))
+    .pipe(dest('dist/img'));
 }
 
+function dev() {
+  watch('./src/scss/**/*.scss', compileCSS);
+  watch('./src/img/**/*', images);
+}
+
+exports.compileCSS = compileCSS;
+exports.images = images;
 exports.dev = dev;
-exports.default = series(compileCSS, dev);
+exports.default = series(images, compileCSS, dev);
