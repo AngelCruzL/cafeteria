@@ -1,0 +1,27 @@
+@use 'abstracts/variables' as var;
+@use 'abstracts/mixins' as mixin;
+
+.main-content {
+  inline-size: 100%;
+  padding-block: 5rem;
+  padding-inline: 3rem;
+  background: var.$color-white;
+
+  @include mixin.respond(tablet) {
+    position: relative;
+    inline-size: 95%;
+    margin-block-start: -10rem;
+    padding-block: 10rem;
+    padding-inline: 10rem;
+  }
+
+  h2::after {
+    content: '';
+    display: block;
+    inline-size: 10rem;
+    block-size: 10rem;
+    margin-inline: auto;
+    background: url(../img/cafe.svg);
+    background-size: 10rem;
+  }
+}

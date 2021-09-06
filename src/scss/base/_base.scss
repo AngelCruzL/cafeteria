@@ -1,3 +1,5 @@
+@use 'abstracts/variables' as var;
+
 *,
 *::after,
 *::before {
@@ -12,9 +14,16 @@ html {
 
 body {
   box-sizing: border-box;
+  background: var.$color-tertiary;
 }
 
 img {
   display: block;
   max-inline-size: 100%;
+}
+
+h1,
+h2,
+h3 {
+  margin-block-end: var.$gap;
 }

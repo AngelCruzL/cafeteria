@@ -5,18 +5,12 @@ body {
   font-size: 1.6rem;
 }
 
-p {
-  color: var.$color-black;
-}
-
-a {
-  text-decoration: none;
-}
-
 h1,
 h2,
 h3 {
-  margin-block-end: var.$gap;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1.5;
 }
 
 h1 {
@@ -25,8 +19,24 @@ h1 {
 
 h2 {
   font-size: 3.6rem;
+  color: var.$color-primary;
+
+  span {
+    display: block;
+    font-size: 1.8rem;
+    color: var.$color-secondary;
+  }
 }
 
 h3 {
   font-size: 3.2rem;
+}
+
+p {
+  color: var.$color-black;
+  line-height: 2;
+}
+
+a {
+  text-decoration: none;
 }
