@@ -6,7 +6,6 @@
     display: flex;
     flex-direction: column;
     margin-block-start: 5rem;
-    list-style: none;
     text-align: center;
 
     @include mixin.respond(tablet) {

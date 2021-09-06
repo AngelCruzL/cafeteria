@@ -1,0 +1,21 @@
+@use 'abstracts/variables' as var;
+@use 'abstracts/mixins' as mixin;
+
+.icons {
+  margin-block-start: var.$gap;
+
+  .list-icons {
+    li {
+      img {
+        margin-inline: auto;
+        inline-size: 12rem;
+      }
+
+      p {
+        font-family: var.$font-tertiary;
+        font-size: 3.2rem;
+        color: var.$color-primary;
+      }
+    }
+  }
+}

@@ -4,14 +4,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Bona+Nova&family=Raleway:wght@700;900&family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="dist/css/main.css" />
+    <link rel="stylesheet" href="./dist/css/main.css" />
 
     <title>Cafetería SASS</title>
   </head>
@@ -41,14 +42,32 @@
       </div>
     </header>
 
-    <main class="main-content u-container">
-      <h2>Conoce más <span>sobre nosotros</span></h2>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere dolor
-        totam, consequuntur eum dignissimos autem quisquam consectetur sequi
-        natus voluptatem est tenetur debitis facilis, rerum officia, tempore cum
-        voluptatibus dolores!
-      </p>
+    <main class="main-content u-container u-center-text">
+      <section>
+        <h2><span>Conoce más</span> sobre nosotros</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere dolor
+          totam, consequuntur eum dignissimos autem quisquam consectetur sequi
+          natus voluptatem est tenetur debitis facilis, rerum officia, tempore
+          cum voluptatibus dolores!
+        </p>
+      </section>
+      <section class="icons">
+        <ul class="list-icons">
+          <li>
+            <img src="./dist/img/icono_cafe.svg" alt="icono café" />
+            <p>Café</p>
+          </li>
+          <li>
+            <img src="./dist/img/icono_postre.svg" alt="icono postre" />
+            <p>Postres</p>
+          </li>
+          <li>
+            <img src="./dist/img/icono_te.svg" alt="icono té" />
+            <p>Té</p>
+          </li>
+        </ul>
+      </section>
     </main>
   </body>
 </html>
