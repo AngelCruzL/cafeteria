@@ -1,0 +1,23 @@
+@use 'abstracts/variables' as var;
+@use 'abstracts/mixins' as mixin;
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include mixin.respond(tablet) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    width: 50%;
+    margin-inline: auto;
+
+    @include mixin.respond(tablet) {
+      width: 20rem;
+      margin-inline: 0;
+    }
+  }
+}
