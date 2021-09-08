@@ -16,12 +16,6 @@
   }
 
   h2::after {
-    content: '';
-    display: block;
-    inline-size: 10rem;
-    block-size: 10rem;
-    margin-inline: auto;
-    background: url(../img/cafe.svg);
-    background-size: 10rem;
+    @include mixin.coffeeHeaderImage;
   }
 }
