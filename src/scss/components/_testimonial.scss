@@ -1,0 +1,38 @@
+@use 'abstracts/variables' as var;
+@use 'abstracts/mixins' as mixin;
+
+.testimonials {
+  inline-size: 100%;
+  padding-block: 5rem;
+  padding-inline: 3rem;
+
+  @include mixin.respond(tablet) {
+    inline-size: 95%;
+    padding-block: 10rem;
+    padding-inline: 10rem;
+  }
+
+  h2::after {
+    @include mixin.coffeeHeaderImage;
+  }
+
+  .testimonial {
+    max-inline-size: 50rem;
+    margin-inline: auto;
+    padding-block: 2rem;
+    padding-inline: 4rem;
+    border-radius: 14px;
+    background: var.$color-tertiary;
+
+    .author {
+      text-align: end;
+      font-family: var.$font-tertiary;
+      font-size: 2.4rem;
+      color: var.$color-primary;
+
+      &::before {
+        content: '- ';
+      }
+    }
+  }
+}
