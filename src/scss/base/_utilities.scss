@@ -6,10 +6,18 @@
   margin-inline: auto;
 }
 
-.u-center-text {
-  text-align: center !important;
+.u-nmt-10 {
+  margin-block-start: -10rem;
 }
 
 .u-bg-primary {
   background: var.$color-primary;
+}
+
+.u-bg-white {
+  background: var.$color-white;
+}
+
+.u-center-text {
+  text-align: center;
 }
