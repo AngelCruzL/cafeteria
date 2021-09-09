@@ -1,0 +1,39 @@
+@use 'abstracts/variables' as var;
+@use 'abstracts/mixins' as mixin;
+
+.header-about {
+  background: url(../img/header_nosotros.jpg) no-repeat;
+  background-size: cover;
+}
+
+.about-content {
+  @include mixin.respond(tablet) {
+    @include mixin.grid(2, 2rem);
+  }
+
+  .image {
+    margin-block-end: var.$gap;
+
+    @include mixin.respond(tablet) {
+      margin-block-end: unset;
+      margin-inline-end: 2rem;
+    }
+
+    img {
+      border: 3rem solid var.$color-white;
+      box-shadow: 9px 10px 5px -7px rgba(0, 0, 0, 0.35);
+      transform: rotate(-6deg);
+    }
+  }
+
+  .text {
+    blockquote {
+      margin-block: 0;
+      margin-inline: 0;
+      padding-block: 1rem;
+      padding-left: 1rem;
+      border-inline-start: 0.5rem solid var.$color-primary;
+      font-size: 2rem;
+    }
+  }
+}

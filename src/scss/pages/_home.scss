@@ -2,7 +2,8 @@
 @use 'abstracts/mixins' as mixin;
 
 .header-home {
-  background: url(../img/header_inicio.jpg);
+  background: url(../img/header_inicio.jpg) no-repeat;
+  background-size: cover;
 }
 
 .icons {
