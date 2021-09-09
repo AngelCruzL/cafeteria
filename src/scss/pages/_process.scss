@@ -1,0 +1,46 @@
+@use 'abstracts/variables' as var;
+@use 'abstracts/mixins' as mixin;
+
+.header-process {
+  background: url(../img/header_proceso.jpg) no-repeat;
+  background-size: cover;
+}
+
+.process {
+  @include mixin.respond(tablet) {
+    display: flex;
+    gap: var.$gap;
+    align-items: center;
+  }
+
+  &:not(:last-of-type) {
+    margin-block-end: var.$gap;
+  }
+
+  &:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+  .image,
+  .text {
+    flex: 1;
+  }
+
+  .text {
+    margin-block-start: 1rem;
+
+    h3 {
+      margin-block: 0 2rem;
+      text-align: start;
+      color: var.$color-primary;
+
+      &::after {
+        content: '';
+        display: block;
+        inline-size: 50%;
+        block-size: 5px;
+        background: var.$color-secondary;
+      }
+    }
+  }
+}
