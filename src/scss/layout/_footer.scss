@@ -1,0 +1,46 @@
+@use 'abstracts/variables' as var;
+@use 'abstracts/mixins' as mixin;
+
+.footer {
+  background: var.$color-white;
+
+  @include mixin.respond(tablet) {
+    background: var.$color-primary;
+  }
+
+  &__content {
+    padding-block: 5rem;
+    padding-inline: 5rem;
+
+    @include mixin.respond(tablet) {
+      @include mixin.grid(3, 2rem);
+    }
+  }
+
+  .copyright {
+    padding-block: 2rem;
+    background: var.$color-primary;
+    color: var.$color-white;
+  }
+}
+
+.footer-box {
+  font-family: var.$font-tertiary;
+  margin-block-end: var.$gap;
+
+  @include mixin.respond(tablet) {
+    margin-block-end: unset;
+  }
+
+  h3 {
+    margin-block-end: 1rem;
+    margin-block-end: 1rem;
+    font-size: 2.4rem;
+    color: var.$color-secondary;
+  }
+
+  p,
+  a {
+    font-size: 2rem;
+  }
+}
