@@ -1,0 +1,24 @@
+@use 'abstracts/variables' as var;
+@use 'abstracts/mixins' as mixin;
+
+.header-menu {
+  background: url(../img/header_menu.jpg) no-repeat;
+  background-size: cover;
+}
+
+.menu-content {
+  background: url(../img/cafe.jpg) no-repeat center bottom;
+  background-size: 100%;
+  aspect-ratio: 3 / 8;
+
+  @include mixin.respond(phone) {
+    aspect-ratio: 3 / 4;
+  }
+
+  @include mixin.respond(tablet) {
+    @include mixin.grid(2, var.$gap);
+    aspect-ratio: 16 / 6;
+    background-size: 40%;
+    background-position: bottom right;
+  }
+}
