@@ -1,0 +1,15 @@
+@use 'abstracts/variables' as var;
+@use 'abstracts/mixins' as mixin;
+
+.header-contact {
+  background: url(../img/header_contacto.jpg) no-repeat;
+  background-size: cover;
+}
+
+.contact-content {
+  @include mixin.respond(tablet) {
+    @include mixin.grid(2, var.$gap);
+    background: url(../img/granos_cafe.jpg) no-repeat right center;
+    background-size: 40%;
+  }
+}

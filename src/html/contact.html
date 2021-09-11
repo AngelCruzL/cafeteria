@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bona+Nova&family=Raleway:wght@700;900&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../../dist/css/main.css" />
+
+    <title>Cafetería SASS</title>
+  </head>
+  <body>
+    <header class="header header-contact">
+      <div class="header__content u-container">
+        <div class="navigation">
+          <div class="navigation__logo">
+            <img src="../../dist/img/logo.svg" alt="logo cafetería" />
+          </div>
+
+          <nav class="navbar">
+            <ul>
+              <li><a href="../../index.html">Inicio</a></li>
+              <li><a href="about.html">Nosotros</a></li>
+              <li><a href="process.html">Proceso</a></li>
+              <li><a href="menu.html">Menú</a></li>
+              <li><a href="gallery.html">Galeria</a></li>
+              <li><a class="active" href="contact.html">Contacto</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="header__text">
+          <h1>Disfruta nuestro delicioso menú</h1>
+        </div>
+      </div>
+    </header>
+
+    <main class="main-content u-container">
+      <h2><span>Reserva tu</span>Mesa</h2>
+
+      <div class="contact-content">
+        <form class="form">
+          <div class="field">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" placeholder="Tu nombre" />
+          </div>
+
+          <div class="field">
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" placeholder="Tu correo" />
+          </div>
+
+          <div class="field">
+            <label for="people">Número de personas:</label>
+            <select name="people" id="people">
+              <option value="" disabled selected>-- Seleccione --</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="more">+4</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="time">Hora:</label>
+            <input type="time" id="time" />
+          </div>
+
+          <div class="field">
+            <label for="date">Fecha:</label>
+            <input type="date" id="date" />
+          </div>
+
+          <div class="field">
+            <input
+              aria-label="Enviar Formulario"
+              type="submit"
+              value="Enviar"
+            />
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__content u-container u-bg-white u-center-text">
+        <div class="footer-box location">
+          <h3>Ubicacion</h3>
+          <p>5016 Kinney Street</p>
+          <p>Springfield, Massachusetts</p>
+        </div>
+        <div class="footer-box bookmark">
+          <h3>Reservación</h3>
+          <p>Tel. 413-475-1906</p>
+          <a href="tel:413-475-1906">Llamar</a>
+        </div>
+        <div class="footer-box schedule">
+          <h3>Horario</h3>
+          <p>Lun-Jue: 11:00 - 22:00</p>
+          <p>Vie-Sab: 09:00 - 24:00</p>
+          <p>Domingo: Cerrado</p>
+        </div>
+      </div>
+
+      <p class="copyright u-center-text">
+        Todos los derechos reservados &copy;. La cafetería
+      </p>
+    </footer>
+  </body>
+</html>
