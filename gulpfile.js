@@ -2,6 +2,8 @@ const { src, dest, watch, series } = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
+const sourcemaps = require('gulp-sourcemaps');
+const cssnano = require('cssnano');
 
 const imagemin = require('gulp-imagemin');
 const webp = require('gulp-webp');
@@ -9,8 +11,10 @@ const avif = require('gulp-avif');
 
 function compileCSS(done) {
   src('./src/scss/main.scss')
+    .pipe(sourcemaps.init())
     .pipe(sass({ outputStyle: 'compressed' }))
-    .pipe(postcss([autoprefixer()]))
+    .pipe(postcss([autoprefixer(), cssnano()]))
+    .pipe(sourcemaps.write('.'))
     .pipe(dest('dist/css'));
 
   done();
