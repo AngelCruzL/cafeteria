@@ -48,4 +48,4 @@ exports.images = images;
 exports.webpImages = webpImages;
 exports.avifImages = avifImages;
 exports.dev = dev;
-exports.default = series(images, webpImages, avifImages, compileCSS, dev);
+exports.default = series(images, webpImages, avifImages, compileCSS);
