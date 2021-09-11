@@ -33,3 +33,11 @@
   background: url(../img/cafe.svg);
   background-size: 10rem;
 }
+
+@mixin contactBgImage($route) {
+  @include respond(tablet) {
+    @include grid(2, var.$gap);
+    background: url($route) no-repeat right center;
+    background-size: 40%;
+  }
+}

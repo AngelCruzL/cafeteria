@@ -1,4 +1,14 @@
-.header-gallery {
+.webp .header-gallery {
+  background: url(../img/header_galeria.webp) no-repeat;
+  background-size: cover;
+}
+
+.avif .header-gallery {
+  background: url(../img/header_galeria.avif) no-repeat;
+  background-size: cover;
+}
+
+.notavif.notwebp .header-gallery {
   background: url(../img/header_galeria.jpg) no-repeat;
   background-size: cover;
 }

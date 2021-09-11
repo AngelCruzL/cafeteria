@@ -1,7 +1,17 @@
 @use 'abstracts/variables' as var;
 @use 'abstracts/mixins' as mixin;
 
-.header-process {
+.webp .header-process {
+  background: url(../img/header_proceso.webp) no-repeat;
+  background-size: cover;
+}
+
+.avif .header-process {
+  background: url(../img/header_proceso.avif) no-repeat;
+  background-size: cover;
+}
+
+.notavif.notwebp .header-process {
   background: url(../img/header_proceso.jpg) no-repeat;
   background-size: cover;
 }

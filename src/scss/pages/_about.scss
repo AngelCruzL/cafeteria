@@ -1,7 +1,17 @@
 @use 'abstracts/variables' as var;
 @use 'abstracts/mixins' as mixin;
 
-.header-about {
+.webp .header-about {
+  background: url(../img/header_nosotros.webp) no-repeat;
+  background-size: cover;
+}
+
+.avif .header-about {
+  background: url(../img/header_nosotros.avif) no-repeat;
+  background-size: cover;
+}
+
+.notavif.notwebp .header-about {
   background: url(../img/header_nosotros.jpg) no-repeat;
   background-size: cover;
 }
